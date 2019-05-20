@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
+import AppContent from './components/app-content'
+
 import './App.scss';
 
 class App extends Component {
@@ -23,7 +25,7 @@ class App extends Component {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Authorization': `Bearer BQApyguMBnc2O426VLBQP8dnJhuslm-0zIcBrGHWq4HlXwspvpffmiY6tOGmTt7P8oBcs3HdTDfnbkNyIidQ-XnAs3I2c1fSF-zTKMWwjYchTr6zwTCmhT6Y7sy6fnaSHFgXspy7-ynMnz-s6Aoc959gSK8jgT39DBa4AT7b97Ty565b6apMz-E5sFoM8LAYzqnkPQHSvJYUZJDKI-aNkalsbJgQF3QGwVFz2cAiF-bk85CmBuo02i-jqz3PtXmSW9oGxaZtb4nrpkmDBXS_lsWxq35fXv4O58w`,
+        'Authorization': `Bearer BQCPiAF81W5U7yGN9Rhp7N3acp7opTxYlFOMTVhlgOhKuiphwZkkp7QoXg_ZCeCczaRkvDn-ktEPy6gZXEDs95XpTUdZuj_dQjFqE54O6TcWtjCsiVaekc-dLFQaa3ViFGDEEtO_TKQAXNdrj7wCw5vF4EJ1lNRyYMtVLYVpULYcY1klQyLz-Bx2Kp2FDFK5cz0xQWg1WQSF3rPzsUHFjEec9q7BJFYCsEkMO8MRRMiCjfwXMveOpz4Vg25X29xtSf3yfQdJ7w9OfncX9tx3olswsa53-BLBoQg`,
       }
     }
 
@@ -48,40 +50,7 @@ class App extends Component {
 
   render () {
     return (
-      <div className="App">
-        <header>
-          <nav>
-            <div className="nav-wrapper">
-              <a href="/" className="brand-logo center"><i className="fab fa-spotify"></i> Spotify View </a>
-            </div>
-          </nav>
-        </header>
-        <main className="main">
-          <div className="row container">
-            {this.state.artists.map((info) => (
-              <div key={ info.id } className="col s12 m6 l4">
-                <div className="card">
-                  <div className="card-image waves-effect waves-block waves-light">
-                    <a href={ info.link } target="_blank" rel="noopener noreferrer">
-                      <img height="300" width="300" className="activator" alt={ info.name } src={ info.img } />
-                    </a>
-                  </div>
-                  <div className="card-content">
-                    <a href={ info.link } target="_blank" rel="noopener noreferrer">
-                      <span className="card-title activator grey-text text-darken-4">
-                        { info.name }
-                      </span>
-                    </a>
-                    <p><a href={ info.open } target="_blank" rel="noopener noreferrer">Abrir no Spotify</a></p>
-                  </div>
-                  <a href={ info.link } target="_blank" rel="noopener noreferrer">
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </main>
-      </div>
+      <AppContent { ...this.state } />
     )
   }
 }
