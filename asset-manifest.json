@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/spotify-view/static/css/main.2334483c.chunk.css",
+    "main.js": "/spotify-view/static/js/main.6074808e.chunk.js",
+    "main.js.map": "/spotify-view/static/js/main.6074808e.chunk.js.map",
+    "runtime~main.js": "/spotify-view/static/js/runtime~main.e124bd55.js",
+    "runtime~main.js.map": "/spotify-view/static/js/runtime~main.e124bd55.js.map",
+    "static/js/2.774c5952.chunk.js": "/spotify-view/static/js/2.774c5952.chunk.js",
+    "static/js/2.774c5952.chunk.js.map": "/spotify-view/static/js/2.774c5952.chunk.js.map",
+    "index.html": "/spotify-view/index.html",
+    "precache-manifest.ef3fe628918fe69e1e0570758f1948c8.js": "/spotify-view/precache-manifest.ef3fe628918fe69e1e0570758f1948c8.js",
+    "service-worker.js": "/spotify-view/service-worker.js",
+    "static/css/main.2334483c.chunk.css.map": "/spotify-view/static/css/main.2334483c.chunk.css.map"
+  }
+}
