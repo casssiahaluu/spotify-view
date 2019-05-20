@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Header from './header'
-import Card from './card'
+import Header from './Header'
+import Card from './Card'
 
 const AppContent = ({artists}) => (
   <div className="App">
@@ -18,7 +18,7 @@ const AppContent = ({artists}) => (
 )
 
 Card.propTypes = {
-  artists: PropTypes.array.isRequired
+  artists: PropTypes.array
 }
 
 export default AppContent

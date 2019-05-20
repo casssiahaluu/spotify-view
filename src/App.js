@@ -48,9 +48,7 @@ class App extends Component {
   }
 
   render () {
-    return (
-      <AppContent { ...this.state } />
-    )
+    return <AppContent { ...this.state } /> 
   }
 }
 

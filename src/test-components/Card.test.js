@@ -3,9 +3,9 @@ import './../../setupTest'
 import { shallow, mount, render } from 'enzyme';
 import toJson from "enzyme-to-json"
 
-import Card from './../components/card';
+import Card from './../components/Card';
 
-it("should render the card if auth", () => {
+it("should render the Card if auth", () => {
   const props = {
     name: "Avicii",
     link: "https://open.spotify.com/artist/1vCWHaC5f2uS3yhpwWbIA6",
