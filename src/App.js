@@ -10,7 +10,6 @@ class App extends Component {
     this.state = {
       artists: []
     }
-    this.componentDidMount = this.componentDidMount.bind(this);
   }
 
   componentDidMount() {
@@ -24,7 +23,7 @@ class App extends Component {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer BQAlwUeFxLey74326vsmd-v4DjP9ZCvAgoG8bydjaQpA3LS00wqKgPCcNhNr2VTxpypQDwrMxBruBpbefnBldMjla8Afz44b-CK2P7xxO3Bwe8HyrCYwxxZkJU6QiA3F86av9vDVI5LPclERXDTSg0rtLX8MYYZzAabj6siXawz-Liegaw',
+        'Authorization': `Bearer BQApyguMBnc2O426VLBQP8dnJhuslm-0zIcBrGHWq4HlXwspvpffmiY6tOGmTt7P8oBcs3HdTDfnbkNyIidQ-XnAs3I2c1fSF-zTKMWwjYchTr6zwTCmhT6Y7sy6fnaSHFgXspy7-ynMnz-s6Aoc959gSK8jgT39DBa4AT7b97Ty565b6apMz-E5sFoM8LAYzqnkPQHSvJYUZJDKI-aNkalsbJgQF3QGwVFz2cAiF-bk85CmBuo02i-jqz3PtXmSW9oGxaZtb4nrpkmDBXS_lsWxq35fXv4O58w`,
       }
     }
 
