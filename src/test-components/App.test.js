@@ -17,7 +17,7 @@ describe("<App />", () => {
     }]
   }
   const API = 'https://api.spotify.com/v1/artists?ids=1vCWHaC5f2uS3yhpwWbIA6';
-  const token = `BQDhRiNY_eU8UtcQA4RAUJiSRVko2qDjE_P02-P1Wc7DLYiQ6PqOa596W9HWDYPdbYYrTzw30-I1sokiWp0H4BdpkZDrHcWsefM4-I1UHRTQUS7W-sBM9lSOPzZCLc7m-v8hH349yc4wm-0ucKqeEQYTsJirXJfjNpVZyf-bgMTMMUGBM6AbDf0Ui4ROLco6_A-YfLwdWcnQUjYYCcckgy3Emybh-kCxtsuOv1wtLvYAxa3Yk3XPIeU9FUqIaiLDF3vC0_WNkJQX2ahj-FKiKJHzmB_vErrishk`
+  const token = `BQDl-Nyg9e4rIPs7nAwsW0gh9tbgnYJw1_rePQ5L4o4lD-iFRM-2NhWOJHCzJtm-ik0UVbCLknbbxEWYR_fexqkE_5CYTK-ON42L0kHBvkORNvximW9mqD8Nf2KcBO1VVwnKGebKhtllLQOWzlN6l0xq8lkVXshakVxb5m7jzwJiK1ANycI_-NnDFwLFocaoBpiCts_C4gYlxP3HN8dPctvSLtsNwwUG2OaED1gi8jT1fHpDLnzkuHjvHvW93vu1CqcM2duSJqpDMTedzkamwHx58kz0JrST-tA`
   const config = {
     headers: {
       'Accept': 'application/json',
@@ -26,11 +26,34 @@ describe("<App />", () => {
     }
   }
 
+  it('should call getArtistis', async () => {
+    jest.spyOn(App.prototype, 'getArtistis')
+    const app = mount(<App {...props} />)
+    const instance = app.instance()
+    instance.getArtistis(token)
+    expect(App.prototype.getArtistis.mock.calls.length).toBe(1);
+  })
+
+  it('should call setToken', async () => {
+    jest.spyOn(App.prototype, 'setToken')
+    const app = mount(<App {...props} />)
+    const instance = app.instance()
+    const e = {
+      target: {
+        value: token
+      }
+    }
+    instance.setToken(e)
+    expect(App.prototype.setToken.mock.calls.length).toBe(1)
+  })
+
   it('async API call with Jest', async () => {
-    let resTest = []
+    const app = mount(<App {...props} />)
+    const instance = app.instance()
+
     const req = await axios.get(API, config)
     .then(function (response) {
-      resTest = response.data.artists.map((artist) => ({
+      instance.state = response.data.artists.map((artist) => ({
         img: artist.images[1].url,
         name: artist.name,
         link: artist.external_urls.spotify,
@@ -40,13 +63,7 @@ describe("<App />", () => {
     .catch(function (error) {
       console.log("This token has expired or is invalid. Get other in https://developer.spotify.com/console/get-several-artists/  and replace at token constant.\n", error);
     })
-    expect(resTest[0].name).toBe('Avicii')
-  })
-
-  it('should call componentDidMount', () => {
-    jest.spyOn(App.prototype, 'componentDidMount')
-    const wrapper = shallow(<App { ...props }/>)
-    expect(App.prototype.componentDidMount.mock.calls.length).toBe(1)
+    expect(instance.state[0].name).toBe('Avicii')
   })
 
   it("should render the App", () => {
