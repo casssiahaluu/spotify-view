@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Form = ({ setToken }) => (
   <div>
@@ -19,5 +20,9 @@ const Form = ({ setToken }) => (
     </div>
   </div>
 )
+
+Form.propTypes = {
+  setToken: PropTypes.func.isRequired
+}
 
 export default Form
