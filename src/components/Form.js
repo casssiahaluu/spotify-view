@@ -13,8 +13,8 @@ const Form = ({ setToken }) => (
       <div className="row">
         <div className="input-field col s12">
           <i className="fas fa-lock-open prefix"></i>
-          <input onKeyUp={ setToken } type="text" id="autocomplete-input" className="autocomplete" />
-          <label htmlFor="autocomplete-input">Token</label>
+          <input onKeyUp={ setToken } type="text" id="set_token" />
+          <label htmlFor="set_token">Token</label>
         </div>
       </div>
     </div>
