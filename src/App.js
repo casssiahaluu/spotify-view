@@ -9,11 +9,18 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      artists: []
+      artists: [],
+      token: ``,
+      getting: false
     }
+    this.setToken = this.setToken.bind(this)
   }
 
-  componentDidMount() {
+  componentDidMount(){
+    this.getArtistis(this.state.token)
+  }
+
+  getArtistis(token) {
     let ids = [
       '0TcVnvKse98awlZxtUKIOk',
       '11irmEzISytQwB3G8uhC5E',
@@ -24,7 +31,7 @@ class App extends Component {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Authorization': `Bearer BQCPiAF81W5U7yGN9Rhp7N3acp7opTxYlFOMTVhlgOhKuiphwZkkp7QoXg_ZCeCczaRkvDn-ktEPy6gZXEDs95XpTUdZuj_dQjFqE54O6TcWtjCsiVaekc-dLFQaa3ViFGDEEtO_TKQAXNdrj7wCw5vF4EJ1lNRyYMtVLYVpULYcY1klQyLz-Bx2Kp2FDFK5cz0xQWg1WQSF3rPzsUHFjEec9q7BJFYCsEkMO8MRRMiCjfwXMveOpz4Vg25X29xtSf3yfQdJ7w9OfncX9tx3olswsa53-BLBoQg`,
+        'Authorization': `Bearer ${token}`,
       }
     }
 
@@ -37,18 +44,32 @@ class App extends Component {
           name: artist.name,
           link: artist.external_urls.spotify,
           open: artist.uri
-        }))
+        })),
+        getting: true
       })
-      return true
     })
     .catch(function (error) {
-      console.log(error);
-      return false
+      if(!!error) {
+        self.setState({
+          getting: false,
+          token: `BQBUUqPtdq8HqOx5wmkkI2UuB3VUUXNmBM-Sq0tz6PuEKZUpNOcO7a_2U4437NI1rAPWTZ3WookXfqwnB4JFdmSXPbcZMWQWBwBgLZA1l_eMNOlrMK46_KJ0Uq7s43BHLCjFGFxTgc8cZGsT1EFPd0ejZQ8HfbfcYLpuzgcUncomijG9v4frpCnAVW2UlBFqCQ3XjRT09IhVfL8PWpqQbCfuwEIYo_yosrxfktASXaYz5kl0mztjf5b5A9LJfB1gQwboLQLcQZzMBaMa5EVKbWETNm8qDK9QO94`
+        })
+      }
     });
   }
 
+  setToken (e) {
+    let token = `` + e.target.value
+    let keyCode = e.which || e.keyCode
+    const ENTER = 13
+    if (keyCode === ENTER) {
+      this.setState({ token: token})
+    }
+    this.getArtistis(token)
+  }
+
   render () {
-    return <AppContent { ...this.state } /> 
+    return <AppContent { ...this.state } setToken={ this.setToken }/>
   }
 }
 

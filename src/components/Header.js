@@ -3,7 +3,10 @@ const Header = () => (
   <header>
     <nav>
       <div className="nav-wrapper">
-        <a href="/" className="brand-logo center"><i className="fab fa-spotify"></i> Spotify View </a>
+        <a href="/" className="brand-logo center">
+          <i className="fab fa-spotify"></i>
+          Spotify View 
+        </a>
       </div>
     </nav>
   </header>
