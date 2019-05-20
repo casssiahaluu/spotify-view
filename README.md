@@ -1,24 +1,22 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*Read the [wiki](https://github.com/HaluDeCassia/spotify-view/wiki/Sobre) for these infos in Portuguese*
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+`npm install` or `yarn install` to install the dependencies
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`npm start` or `yarn start` to run project and open [http://localhost:3000](http://localhost:3000) to view it in the browser
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+`npm test`or `yarn start` to run all tests. This project uses Jest to test, for more testing options, just follow the instructions in the terminal (more info in [running tests](https://facebook.github.io/create-react-app/docs/running-tests)
 
-### `npm test`
+### Extras Scripts
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`npm run build` or `yarn build` to build the minified project
+`npm run deploy` or `yarn deploy` to deploy the project in github-pages 
 
-### `npm run build`
-
+**Note: In this process, you must first run the `build`, then the `deploy`**
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
@@ -31,38 +29,13 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Dependency list
+- [axios](https://www.npmjs.com/package/axios)
+- [Materialize](https://materializecss.com/)
+- [node-sass](https://www.npmjs.com/package/node-sass?activeTab=versions)
+- [React](https://reactjs.org/docs/hello-world.html)
+- [ReactDOM](https://reactjs.org/docs/hello-world.html)
+- [react-scripts](https://facebook.github.io/create-react-app/docs/getting-started)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+*This page can be acessed by [https://haludecassia.github.io/spotify-view/](https://haludecassia.github.io/spotify-view/)*
