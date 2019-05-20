@@ -1,22 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { expect } from 'chai'
+import './../../setupTest'
+import { shallow, mount, render } from 'enzyme';
+import toJson from "enzyme-to-json"
 
 import Card from './../components/card';
 
-it("Card is a function", () => {
-  expect(Card).to.be.a('function')
+it("should render the card if auth", () => {
+  const props = {
+    name: "Avicii",
+    link: "https://open.spotify.com/artist/1vCWHaC5f2uS3yhpwWbIA6",
+    open: "spotify:artist:1vCWHaC5f2uS3yhpwWbIA6",
+    img: "https://i.scdn.co/image/9c0d8fa969a9f5db6ff860203d6880a125e501d2"
+  }
+  const card = mount(<Card {...props} />)
+  expect(toJson(card)).toMatchSnapshot()
 })
-
-it('renders Card with props', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(
-    <Card
-      link="{ info.link }"
-      name="{ info.name }"
-      open="{ info.open }"
-      img="{ info.img }"
-    />,
-  div);
-  ReactDOM.unmountComponentAtNode(div);
-});

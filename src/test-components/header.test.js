@@ -1,14 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { expect } from 'chai'
+import './../../setupTest'
+import { shallow, mount, render } from 'enzyme';
+import toJson from "enzyme-to-json"
+
 import Header from './../components/header';
 
-it("Header is a function", () => {
-  expect(Header).to.be.a('function')
+it("should render the header", () => {
+  const header = mount(<Header />)
+  expect(toJson(header)).toMatchSnapshot()
 })
-
-it('renders Header without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Header />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
