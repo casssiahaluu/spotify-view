@@ -9,7 +9,7 @@ In the project directory, you can run:
 
 `npm start` or `yarn start` to run project and open [http://localhost:3000](http://localhost:3000) to view it in the browser
 
-`npm test`or `yarn start` to run all tests. This project uses Jest to test, for more testing options, just follow the instructions in the terminal (more info in [running tests](https://facebook.github.io/create-react-app/docs/running-tests)
+`npm test`or `yarn test` to run all tests. This project uses Jest to test, for more testing options, just follow the instructions in the terminal (more info in [running tests](https://facebook.github.io/create-react-app/docs/running-tests))
 
 ### Extras Scripts
 
