@@ -1,9 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import './../setupTest'
+import { shallow, mount, render } from 'enzyme';
+import toJson from "enzyme-to-json"
+
 import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+it("should render the App", () => {
+  const app = mount(<App />)
+  expect(toJson(app)).toMatchSnapshot()
+})
