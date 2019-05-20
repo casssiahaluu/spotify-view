@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Card = ({ link, name, open, img }) => (
   <div className="col s12 m6 l4">
@@ -19,5 +20,12 @@ const Card = ({ link, name, open, img }) => (
     </div>
   </div>
 )
+
+Card.propTypes = {
+  link: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  open: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired
+}
 
 export default Card

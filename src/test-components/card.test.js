@@ -8,8 +8,15 @@ it("Card is a function", () => {
   expect(Card).to.be.a('function')
 })
 
-it('renders Card without crashing', () => {
+it('renders Card with props', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Card />, div);
+  ReactDOM.render(
+    <Card
+      link="{ info.link }"
+      name="{ info.name }"
+      open="{ info.open }"
+      img="{ info.img }"
+    />,
+  div);
   ReactDOM.unmountComponentAtNode(div);
 });
