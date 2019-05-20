@@ -15,7 +15,9 @@ const Card = ({ link, name, open, img }) => (
             { name }
           </span>
         </a>
-        <p><a href={ open } >Abrir no Spotify</a></p>
+        <p>
+          <a href={ open } >Abrir no Spotify</a>
+        </p>
       </div>
     </div>
   </div>
