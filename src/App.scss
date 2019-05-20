@@ -1,0 +1,21 @@
+nav {
+  color: #fff;
+  background-color: #1db954;
+  height: 7vh;
+}
+
+.brand-logo {
+  vertical-align: middle;
+}
+
+.main {
+  background-color: #010101;
+  min-height: 93vh;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
