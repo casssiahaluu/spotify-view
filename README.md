@@ -17,15 +17,7 @@ In the project directory, you can run:
 `npm run deploy` or `yarn deploy` to deploy the project in github-pages 
 
 **Note: In this process, you must first run the `build`, then the `deploy`**
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
+For more about [deployment](https://facebook.github.io/create-react-app/docs/deployment).
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
