@@ -2,15 +2,20 @@
   "name": "spotify-view",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://haludecassia.github.io/spotify-view",
   "dependencies": {
+    "axios": "^0.18.0",
+    "materialize-css": "^1.0.0-rc.2",
+    "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
+    "test": "react-scripts test --collect-coverage",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -27,5 +32,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "gh-pages": "^2.0.1"
   }
 }
