@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
-import AppContent from './components/app-content'
+import AppContent from './components/AppContent'
 
 import './App.scss';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Card = ({ id, link, name, open, img }) => (
-  <div key={ id } className="col s12 m6 l4">
+const Card = ({ link, name, open, img }) => (
+  <div className="col s12 m6 l4">
     <div className="card">
       <div className="card-image waves-effect waves-block waves-light">
         <a href={ link } target="_blank" rel="noopener noreferrer">

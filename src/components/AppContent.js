@@ -8,8 +8,7 @@ const AppContent = ({artists}) => (
     <main className="main">
       <div className="row container">
         {artists.map((info) => (
-          <Card
-            id={ info.id }
+          <Card key={ info.id }
             link={ info.link }
             name={ info.name }
             open={ info.open }
