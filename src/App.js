@@ -11,13 +11,8 @@ class App extends Component {
     this.state = {
       artists: [],
       token: ``,
-      getting: false
     }
     this.setToken = this.setToken.bind(this)
-  }
-
-  componentDidMount(){
-    this.getArtistis(this.state.token)
   }
 
   getArtistis(token) {
@@ -44,17 +39,11 @@ class App extends Component {
           name: artist.name,
           link: artist.external_urls.spotify,
           open: artist.uri
-        })),
-        getting: true
+        }))
       })
     })
     .catch(function (error) {
-      if(!!error) {
-        self.setState({
-          getting: false,
-          token: `BQBUUqPtdq8HqOx5wmkkI2UuB3VUUXNmBM-Sq0tz6PuEKZUpNOcO7a_2U4437NI1rAPWTZ3WookXfqwnB4JFdmSXPbcZMWQWBwBgLZA1l_eMNOlrMK46_KJ0Uq7s43BHLCjFGFxTgc8cZGsT1EFPd0ejZQ8HfbfcYLpuzgcUncomijG9v4frpCnAVW2UlBFqCQ3XjRT09IhVfL8PWpqQbCfuwEIYo_yosrxfktASXaYz5kl0mztjf5b5A9LJfB1gQwboLQLcQZzMBaMa5EVKbWETNm8qDK9QO94`
-        })
-      }
+      console.log(error);
     });
   }
 
@@ -64,8 +53,8 @@ class App extends Component {
     const ENTER = 13
     if (keyCode === ENTER) {
       this.setState({ token: token})
+      this.getArtistis(token)
     }
-    this.getArtistis(token)
   }
 
   render () {

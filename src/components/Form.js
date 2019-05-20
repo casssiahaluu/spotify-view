@@ -22,7 +22,7 @@ const Form = ({ setToken }) => (
 )
 
 Form.propTypes = {
-  setToken: PropTypes.func.isRequired
+  setToken: PropTypes.func
 }
 
 export default Form
