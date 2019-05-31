@@ -11,10 +11,15 @@ const Form = ({ setToken }) => (
     </div>
     <div className="col s12">
       <div className="row">
-        <div className="input-field col s12">
+        <div className="input-field col s11">
           <i className="fas fa-lock-open prefix"></i>
           <input onKeyUp={ setToken } type="text" id="set_token" />
           <label htmlFor="set_token">Token</label>
+        </div>
+        <div className="input-field col s1">
+          <button className="btn-floating" >
+            <i className="material-icons right">send</i>
+          </button>
         </div>
       </div>
     </div>
