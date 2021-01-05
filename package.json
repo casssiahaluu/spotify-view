@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://haludecassia.github.io/spotify-view",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "materialize-css": "^1.0.0-rc.2",
     "node-sass": "^4.13.1",
     "react": "^16.8.6",
